@@ -41,9 +41,14 @@
     <br>
     <detail-box>
         <pre>
-            Phone number: 0983101027                    
-            E-mail: thanachai@odds.team                 
+            Phone number: {{ phone_no }}                    
+            E-mail: {{ email }}                 
         </pre>
+        <form action="." method="POST">
+            {% csrf_token %}
+            {{ form.email }}
+            <button type="submit">Subscribe</button>
+        </form>
     </detail-box>
 </body>
 
